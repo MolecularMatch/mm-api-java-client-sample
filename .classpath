@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jackson-annotations-2.4.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jackson-core-2.4.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jackson-databind-2.4.2.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jackson-datatype-joda-2.1.5.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jersey-client-1.18.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jersey-core-1.18.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/jersey-multipart-1.18.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/joda-time-2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/mimepull-1.9.3.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/lib/swagger-annotations-1.5.3-M1.jar"/>
+	<classpathentry kind="lib" path="/Users/ryan/dev/mm-api-java-client/target/swagger-java-client-1.0.0.jar" sourcepath="/Users/ryan/dev/mm-api-java-client/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
