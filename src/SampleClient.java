@@ -1,7 +1,9 @@
 import io.swagger.client.ApiException;
+import io.swagger.client.api.FeedbackApi;
 import io.swagger.client.api.SearchApi;
 import io.swagger.client.api.StaticApi;
 import io.swagger.client.model.Drug;
+import io.swagger.client.model.FeedbackResponse;
 import io.swagger.client.model.Response;
 import io.swagger.client.model.StaticResponse;
 import io.swagger.client.model.SuggestionResponse;
@@ -128,6 +130,25 @@ public class SampleClient {
 				System.out.println("PASS: Get trial type");
 			else
 				System.out.println("FAIL: Get trial type");
+			
+			
+			//Test Feedback
+			FeedbackApi feedback = new FeedbackApi();
+			
+			FeedbackResponse feedbackResponse = feedback.ReportTrialProblem(apiKey, "123456", "123456", "Other", "Some text");
+			String feedbackId = feedbackResponse.getId();
+			if( feedbackId.length() > 0 )System.out.println("PASS: Feedback to trials id is " + feedbackId);
+			else System.out.println("FAIL: Feedback report trial");
+			
+			feedbackResponse = feedback.PutProblem(apiKey, feedbackId, "new reson", "my new message");
+			if( feedbackResponse.getSuccess() ) System.out.println("PASS: Update feedback");
+			else System.out.println("FAIL: Update Feedback");
+			
+			
+			feedbackResponse = feedback.ReportDrugProblem(apiKey, "123456", "123456", "Other", "Some text");
+			String feedbackId1 = feedbackResponse.getId();
+			if( feedbackId.length() > 0 )System.out.println("PASS: Feedback to drugs id is " + feedbackId1);
+			else System.out.println("FAIL: Feedback report drugs");
 
 		} catch (ApiException e) {
 			e.printStackTrace();
