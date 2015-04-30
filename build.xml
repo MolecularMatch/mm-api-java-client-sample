@@ -50,4 +50,17 @@
     <delete dir="${build}"/>
     <delete dir="${dist}"/>
   </target>
+
+  <target name="run" depends="dist" description="run the sample">
+    <java jar="dist/lib/mm-api-java-client-sample.jar"
+        fork="true"
+        failonerror="true"
+        >
+        <classpath>
+            <fileset dir="${lib}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </classpath>
+    </java>
+  </target>
 </project>
