@@ -1,12 +1,12 @@
 # mm-api-java-client-sample
 Java api sample client to access MM API
 
-##Compile
+###Compile
 ```
 ant
 ```
 
-##Run
+###Run
 ```
 ant run
 ```
