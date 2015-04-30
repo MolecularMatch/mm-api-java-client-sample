@@ -1,3 +1,5 @@
+package com.molecularmatch.api;
+
 import io.swagger.client.ApiException;
 import io.swagger.client.api.FeedbackApi;
 import io.swagger.client.api.SearchApi;

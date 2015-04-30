@@ -17,10 +17,9 @@
 
   <target name="compile" depends="init" description="compile the source " >
     <!-- Compile the java code from ${src} into ${build} -->
-    <javac srcdir="${src}" destdir="${build}"/>
     <javac
             srcdir="${src}"
-            destdir="${build"
+            destdir="${build}"
             debug="true"
             deprecation="false"
             verbose="false"
@@ -39,7 +38,11 @@
     <mkdir dir="${dist}/lib"/>
 
     <!-- Put everything in ${build} into the mm-api-java-client-sample-${DSTAMP}.jar file -->
-    <jar jarfile="${dist}/lib/mm-api-java-client-sample-${DSTAMP}.jar" basedir="${build}"/>
+    <jar jarfile="${dist}/lib/mm-api-java-client-sample.jar" basedir="${build}">
+        <manifest>
+            <attribute name="Main-Class" value="com.molecularmatch.api.SampleClient"/>
+        </manifest>
+    </jar>
   </target>
 
   <target name="clean" description="clean up" >
