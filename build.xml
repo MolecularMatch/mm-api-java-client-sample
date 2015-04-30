@@ -52,11 +52,12 @@
   </target>
 
   <target name="run" depends="dist" description="run the sample">
-    <java jar="dist/lib/mm-api-java-client-sample.jar"
+    <java classname="com.molecularmatch.api.SampleClient"
         fork="true"
         failonerror="true"
         >
         <classpath>
+            <fileset file="${dist}/lib/mm-api-java-client-sample.jar" />
             <fileset dir="${lib}">
                 <include name="**/*.jar"/>
             </fileset>
